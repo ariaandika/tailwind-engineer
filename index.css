@@ -29,3 +29,27 @@
   ;
 }
 
+@layer component {
+  .tb-container {
+    @apply w-full overflow-y-auto;
+  }
+  .tb {
+    @apply w-full;
+  }
+  .tb thead tr {
+    @apply border-b text-left;
+  }
+  .tb thead tr th {
+    @apply px-3 py-2 text-sm text-muted-foreground;
+  }
+  .tb tbody tr {
+    @apply border-b border-muted text-left [tbody_&]:last:border-none;
+  }
+  .tb tbody tr td {
+    @apply px-3 py-3 text-sm;
+  }
+  .tb tbody tr:last-child {
+    @apply border-transparent;
+  }
+}
+
