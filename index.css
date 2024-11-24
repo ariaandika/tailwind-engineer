@@ -1,9 +1,21 @@
 @import "tailwindcss";
 
 @theme {
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-black);
+
   --color-primary: var(--color-indigo-600);
   --color-primary-hover: var(--color-indigo-500);
   --color-primary-active: var(--color-indigo-400);
+
+  --color-muted: var(--color-gray-400);
+  --color-muted-foreground: hsl(--color-gray-100);
+}
+
+@layer base {
+  html {
+    @apply bg-background text-foreground;
+  }
 }
 
 @utility btn {
