@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-indigo-600);
+  --color-primary-hover: var(--color-indigo-500);
+  --color-primary-active: var(--color-indigo-400);
+}
+
+@utility btn {
+  @apply px-4 py-2;
+}
+
+@utility btn-primary {
+  @apply rounded-md transition-colors cursor-pointer
+  bg-primary hover:bg-primary-hover active:bg-primary-active
+  text-white font-bold
+  ;
+}
+
