@@ -23,9 +23,10 @@
 }
 
 @utility btn-primary {
-  @apply rounded-md transition-colors cursor-pointer
+  @apply rounded-md transition-colors
   bg-primary hover:bg-primary-hover active:bg-primary-active
   text-white font-bold
+  disabled:bg-muted disabled:text-muted-foreground not-disabled:cursor-pointer
   ;
 }
 
@@ -52,4 +53,8 @@
     @apply border-transparent;
   }
 }
+
+@variant activated (&[activation="true"]);
+
+
 
