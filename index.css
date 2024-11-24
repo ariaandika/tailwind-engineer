@@ -56,5 +56,32 @@
 
 @variant activated (&[activation="true"]);
 
+@layer component {
+  .vault {
+    @apply fixed /* grid */ top-0 left-0 w-screen h-screen opacity-0
+    overflow-auto
+    vault-open:bg-black/40
+    vault-open:opacity-100
+    vault-open:transition-colors
+
+    not-vault-open:pointer-events-none
+    not-vault-open:transition
+    ;
+
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    /* grid-template-rows: 20vh 1fr; */
+
+    .body {
+      @apply
+        not-in-vault-open:translate-y-full
+        relative
+        transition-transform;
+    }
+
+  }
+}
+
+@variant vault-open (&.vault-open);
 
 
